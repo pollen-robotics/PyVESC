@@ -431,6 +431,7 @@ class JoyTeleop(Node):
         self.emergency_reachy.head.l_antenna.turn_on()
         self.get_logger().info("ReachySDK initialized and turned on.")
         set_speed_and_torque_limits(self.emergency_reachy, torque_limit=TORQUE_LIMIT, speed_limit=SPEED_LIMIT)
+        self.emergency_reachy..mobile_base.lidar.safety_enabled = False
         
         self.prev_joy2 = -1
         self.prev_joy5 = -1
